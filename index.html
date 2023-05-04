@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bán Đồ Làm Bếp Trực Tuyến</title>
+
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/datajson.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./js/all.min.css">
+
+    <script>
+        function setMasp(masp) {
+            localStorage.setItem("masp", masp)
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <nav>
+                <div class="img-nav">
+                    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: wheat">
+                        <a class="navbar-brand" href="index.html"><img src="./img/logo (1).webp" alt="" id="logo"></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="index.html">Trang Chủ<span class="sr-only"></span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="ThongTin.html">Thông Tin</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Sản Phẩm
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="index.html#Dao">Dao</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="index.html#Noi">Nồi</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="index.html#Thietbi">Thiết Bị Điện</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="index.html#Khac">Vật Dụng Khác</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <form class="form-inline my-2 my-lg-0">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm tại đây.." aria-label="Search">
+                                <button class="btn btn-outline-success my-2 my-sm-0 mr-sm-2" type="submit">Search</button>
+                            </form>
+                            <div>
+                                <ul class="navbar-nav mr-auto">
+                                    <li class="nav-item" id="taikhoan">
+                                        <a class="nav-link" href="#">Đăng ký / Đăng nhập</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </nav>
+        </header>
+
+        <div class="content">
+            <div class="bd-example">
+                <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./img/banner2.jpg" class="d-block w-100" alt="..." style="height: 550px;">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h4>Đồng hành cùng mái ấm gia đình Việt</h4>
+                                <p>Hoạt động nấu ăn là một phần quan trọng trong việc giữ gìn hạnh phúc gia đình
+                                </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/banner-bep.jpg" class="d-block w-100" alt="..."style="height: 550px;">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h4>Thiết kế sang trọng, hiện đại, chất lượng cao phù hợp với mọi căn bếp</h4>
+                                <p>Giúp việc nấu ăn trở nên thú vị và dễ dàng hơn bao giờ hết</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="container" style="background-color: wheat;">
+                <h3 id="Dao" class="text-center mt-sm-4">Dao</h3>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 ">
+                        <div class="product-grid3">
+                            <div class="product-image3">
+                                <a href="chitietsanpham.html" onclick="setMasp(1)">
+                                    <img class="pic-1" src="./img/Dao/katana.webp">
+                                </a>
+                                <ul class="social">
+                                    <li><a href="chitietsanpham.html" onclick="setMasp(1)"><i
+                                                class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="product-content">
+                                <h3 class="title"><a href="chitietsanpham.html" onclick="setMasp(1)">BỘ 5 CHIẾC DAO BẾP CAO CẤP KATANA BASIC - SET 5 KATASET5 ĐA NĂNG - THÁI THỊT CÁ (5 CHIẾC)
+                                        </a></h3>
+                                <div class="price">600.000₫</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="product-grid3">
+                            <div class="product-image3">
+                                <a href="chitietsanpham.html" onclick="setMasp(2)">
+                                    <img class="pic-1" src="./img/Dao/hop2katana.webp">
+                                </a>
+                                <ul class="social">
+                                    <li><a href="chitietsanpham.html" onclick="setMasp(2)"><i
+                                                class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="product-content">
+                                <h3 class="title">
+                                    <a href="chitietsanpham.html" onclick="setMasp(2)">BỘ 2 CHIẾC DAO BẾP CAO CẤP THƯƠNG HIỆU KATANA ESSENTIAL - DAO THÁI THỊT CÁ - DAO ĐA NĂNG - KATA220</a></h3>
+                                <div class="price">989.000₫</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="product-grid3">
+                            <div class="product-image3">
+                                <a href="chitietsanpham.html" onclick="setMasp(3)">
+                                    <img class="pic-1" src="./img/Dao/katana3.webp">
+                                </a>
+                                <ul class="social">
+                                    <li><a href="chitietsanpham.html" onclick="setMasp(3)"><i
+                                                class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="product-content">
+                                <h3 class="title">
+                                    <a href="chitietsanpham.html" onclick="setMasp(3)">BỘ 3 CHIẾC DAO BẾP CAO CẤP THƯƠNG HIỆU KATANA ESSENTIAL - DAO THÁI THỊT CÁ - DAO ĐA NĂNG - DAO GỌT HOA QUẢ - KATA200</a></h3>
+                                <div class="price">1.117.000₫</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="product-grid3">
+                            <div class="product-image3">
+                                <a href="chitietsanpham.html" onclick="setMasp(4)">
+                                    <img class="pic-1" src="./img/Dao/daochat3.webp">
+                                </a>
+                                <ul class="social">
+                                    <li><a href="chitietsanpham.html" onclick="setMasp(4)"><i
+                                                class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="product-content">
+                                <h3 class="title">
+                                    <a href="chitietsanpham.html" onclick="setMasp(4)">BỘ 3 CHIẾC DAO BẾP CAO CẤP THƯƠNG HIỆU KATANA ESSENTIAL - DAO CHẶT - DAO THÁI - DAO GỌT HOA QUẢ - KATASET001</a></h3>
+                                <div class="price">1.797.300₫</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container" style="background-color: wheat;">
+                <h3 id="Noi" class="text-center mt-sm-4">Nồi</h3>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="product-grid3">
+                            <div class="product-image3">
+                                <a href="chitietsanpham.html" onclick="setMasp(9)">
+                                    <img class="pic-1" src="./img/Noi/bo-noi-4-mon-fissler-opc2-nap-inox-1.jpg">
+                                </a>
+                                <ul class="social">
+                                    <li><a href="chitietsanpham.html" onclick="setMasp(9)"><i
+                                                class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="product-content">
+                                <h3 class="title"><a href="chitietsanpham.html" onclick="setMasp(9)">Bộ nồi 4 món Fissler OPC2 Nắp inox</a></h3>
+                                <div class="price">19.470.000₫</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="product-grid3">
+                            <div class="product-image3">
+                                <a href="chitietsanpham.html" onclick="setMasp(10)">
+                                    <img class="pic-1" src="./img/Noi/bo-4-noi-thep-fissler-hamburg.jpg">
+                                </a>
+                                <ul class="social">
+                                    <li><a href="chitietsanpham.html" onclick="setMasp(10)"><i
+                                                class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="product-content">
+                                <h3 class="title"><a href="chitietsanpham.html" onclick="setMasp(10)">BỘ NỒI 4 MÓN FISSLER HAMBURG
+                                </a></h3>
+                                <div class="price">7.990.000₫</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="product-grid3">
+                            <div class="product-image3">
+                                <a href="chitietsanpham.html" onclick="setMasp(11)">
+                                    <img class="pic-1" src="./img/Noi/bo-noi-chao-chong-dinh-baby-elmich-el-1167-16cm.jpg">
+                                </a>
+                                <ul class="social">
+                                    <li><a href="chitietsanpham.html" onclick="setMasp(11)"><i
+                                                class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="product-content">
+                                <h3 class="title">
+                                    <a href="chitietsanpham.html" onclick="setMasp(11)">Bộ nồi chảo chống dính Baby Elmich EL-1167 (16cm)</a></h3>
+                                <div class="price">499.000đ</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="product-grid3">
+                            <div class="product-image3">
+                                <a href="chitietsanpham.html" onclick="setMasp(12)">
+                                    <img class="pic-1" src="./img/Noi/chao-inox-fissler-original-pro-size-28cm-1.jpg">
+                                </a>
+                                <ul class="social">
+                                    <li><a href="chitietsanpham.html" onclick="setMasp(12)"><i
+                                                class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="product-content">
+                                <h3 class="title">
+                                    <a href="chitietsanpham.html" onclick="setMasp(12)">Chảo inox Fissler Original Pro size 28cm</a></h3>
+                                <div class="price">5.830.000đ</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container" style="background-color: wheat;">
+                <h3 id="Thietbi" class="text-center mt-sm-4">Thiết Bị Điện</h3>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="product-grid3">
+                            <div class="product-image3">
+                                <a href="chitietsanpham.html" onclick="setMasp(14)">
+                                    <img class="pic-1" src="./img/Thietbidien/10025825-noi-com-dien-zojirushi-1-8-lit-np-hrq18-xt-1.jpg">
+                                </a>
+                                <ul class="social">
+                                    <li><a href="chitietsanpham.html" onclick="setMasp(14)"><i
+                                                class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="product-content">
+                                <h3 class="title"><a href="chitietsanpham.html" onclick="setMasp(14)">Nồi cơm điện Zojirushi 1.8 lít NP-HRQ18-XT</a></h3>
+                                <div class="price">18.990.000đ</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="product-grid3">
+                            <div class="product-image3">
+                                <a href="chitietsanpham.html" onclick="setMasp(13)">
+                                    <img class="pic-1" src="./img/Thietbidien/10054108-lo-vi-song-electrolux-emsb30xcf-1.jpg">
+                                </a>
+                                <ul class="social">
+                                    <li><a href="chitietsanpham.html" onclick="setMasp(13)"><i
+                                                class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="product-content">
+                                <h3 class="title"><a href="chitietsanpham.html" onclick="setMasp(13)">Lò vi sóng Electrolux 30 lít EMSB30XCF</a></h3>
+                                <div class="price">10.990.000đ</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="product-grid3">
+                            <div class="product-image3">
+                                <a href="chitietsanpham.html" onclick="setMasp(17)">
+                                    <img class="pic-1" src="./img/Thietbidien/10048953-noi-chien-khong-dau-philips-7-3-lit-hd9860-90-1.jpg">
+                                </a>
+                                <ul class="social">
+                                    <li><a href="chitietsanpham.html" onclick="setMasp(17)"><i
+                                                class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="product-content">
+                                <h3 class="title">
+                                    <a href="chitietsanpham.html" onclick="setMasp(17)">Nồi chiên không dầu Philips 7.3 lít HD9860/90</a></h3>
+                                <div class="price">6.990.000đ</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="product-grid3">
+                            <div class="product-image3">
+                                <a href="chitietsanpham.html" onclick="setMasp(15)">
+                                    <img class="pic-1" src="./img/Thietbidien/may-hut-mui-smeg-kbt900xe-1.jpg">
+                                </a>
+                                <ul class="social">
+                                    <li><a href="chitietsanpham.html" onclick="setMasp(15)"><i
+                                                class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="product-content">
+                                <h3 class="title">
+                                    <a href="chitietsanpham.html" onclick="setMasp(15)">Máy hút mùi Smeg KBT900XE</a></h3>
+                                <div class="price">16.990.000đ</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="product-grid3">
+                            <div class="product-image3">
+                                <a href="chitietsanpham.html" onclick="setMasp(16)">
+                                    <img class="pic-1" src="./img/Thietbidien/binh-dun-smeg-lit-klf03rdeu-1.jpg">
+                                </a>
+                                <ul class="social">
+                                    <li><a href="chitietsanpham.html" onclick="setMasp(16)"><i
+                                                class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="product-content">
+                                <h3 class="title">
+                                    <a href="chitietsanpham.html" onclick="setMasp(16)">Bình đun Smeg 1.7 lít KLF03RDEU</a></h3>
+                                <div class="price">4.890.000đ</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="product-grid3">
+                            <div class="product-image3">
+                                <a href="chitietsanpham.html" onclick="setMasp(18)">
+                                    <img class="pic-1" src="./img/Thietbidien/10042404-may-rua-chen-electrolux-1950w-esf5512lox-2_klin-2s.jpg">
+                                </a>
+                                <ul class="social">
+                                    <li><a href="chitietsanpham.html" onclick="setMasp(18)"><i
+                                                class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="product-content">
+                                <h3 class="title">
+                                    <a href="chitietsanpham.html" onclick="setMasp(18)">Máy rửa chén Electrolux 1950W ESF5512LOX</a></h3>
+                                <div class="price">20.490.000đ</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="product-grid3">
+                            <div class="product-image3">
+                                <a href="chitietsanpham.html" onclick="setMasp(19)">
+                                    <img class="pic-1" src="./img/Thietbidien/laudien.jpg">
+                                </a>
+                                <ul class="social">
+                                    <li><a href="chitietsanpham.html" onclick="setMasp(19)"><i
+                                                class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="product-content">
+                                <h3 class="title">
+                                    <a href="chitietsanpham.html" onclick="setMasp(19)">LẨU ĐIỆN TIGER QUEEN SQ-C350</a></h3>
+                                <div class="price">2.390.000đ</div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="container" style="background-color: wheat;">
+                <h3 id="Khac" class="text-center mt-sm-4">Vật dụng khác</h3>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="product-grid3">
+                            <div class="product-image3">
+                                <a href="chitietsanpham.html" onclick="setMasp(20)">
+                                    <img class="pic-1" src="./img/Vatdungkhac/thotgo.webp">
+                                </a>
+                                <ul class="social">
+                                    <li><a href="chitietsanpham.html" onclick="setMasp(20)"><i
+                                                class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="product-content">
+                                <h3 class="title"><a href="chitietsanpham.html" onclick="setMasp(20)">THỚT GỖ TEAK CAO CẤP KATANA CỠ LỚN KT05 - CHỮ NHẬT KÍCH THƯỚC 38X280X400MM</a></h3>
+                                <div class="price">600.000₫</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="product-grid3">
+                            <div class="product-image3">
+                                <a href="chitietsanpham.html" onclick="setMasp(21)">
+                                    <img class="pic-1" src="./img/Vatdungkhac/da-mai-tinh-naniwa-do-min-12000-210x70x20-s.webp">
+                                </a>
+                                <ul class="social">
+                                    <li><a href="chitietsanpham.html" onclick="setMasp(21)"><i
+                                                class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="product-content">
+                                <h3 class="title"><a href="chitietsanpham.html" onclick="setMasp(21)">ĐÁ MÀI DAO TINH NANIWA ĐỘ MỊN #12000 (210X70X20)</a></h3>
+                                <div class="price">2.159.200₫</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="product-grid3">
+                            <div class="product-image3">
+                                <a href="chitietsanpham.html" onclick="setMasp(22)">
+                                    <img class="pic-1" src="./img/Vatdungkhac/gks210.webp">
+                                </a>
+                                <ul class="social">
+                                    <li><a href="chitietsanpham.html" onclick="setMasp(22)"><i
+                                                class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="product-content">
+                                <h3 class="title">
+                                    <a href="chitietsanpham.html" onclick="setMasp(22)">KÉO BẾP NHẬT CAO CẤP GLOBAL - KÉO CẮT GÀ GKS210</a></h3>
+                                <div class="price">2.249.100₫</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="product-grid3">
+                            <div class="product-image3">
+                                <a href="chitietsanpham.html" onclick="setMasp(23)">
+                                    <img class="pic-1" src="./img/Vatdungkhac/Dua-an-bac-ta-go-dan-huong-go-mun-cao-cap-sang-trong-LILI_237599_4.jpg">
+                                </a>
+                                <ul class="social">
+                                    <li><a href="chitietsanpham.html" onclick="setMasp(23)"><i
+                                                class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="product-content">
+                                <h3 class="title">
+                                    <a href="chitietsanpham.html" onclick="setMasp(23)">ĐŨA ĂN BẠC TA, GỖ ĐÀN HƯƠNG ĐỎ, GỖ MUN CAO CẤP SANG TRỌNG LILI_237599</a></h3>
+                                <div class="price">6.174.000₫</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="dangki" id="dangki">
+            <table class="table table-active table-striped table-hover table-bordered" role="table" id="danhSach">
+                <h4 class="e color mt-lg-4" style="text-align: center;">DANH SÁCH ĐĂNG KÝ TÀI KHOẢN THÀNH CÔNG</h4>
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Họ tên</th>
+                        <th>Email</th>
+                        <th>Ngày sinh</th>
+                        <th>Giới tính</th>
+                        <th>Địa chỉ</th>
+                        <th>Số điện thoại</th>
+                        <th>Mật khẩu</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+
+        <footer class="text-center text-lg-start bg-light text-muted mt-lg-3">
+            <!-- Section: Links  -->
+            <section class="">
+                <div class="container text-center text-md-start mt-5">
+                    <!-- Grid row -->
+                    <div class="row mt-3">
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                            <!-- Content -->
+                            <h6 class="text-uppercase fw-bold mb-4">Shop Dụng Cụ Làm Bếp
+                            </h6>
+                            <p>
+                                Dụng cụ làm bếp là những vật dụng thiết yếu không thể thiếu trong mỗi gia đình, chúng tôi rất hân hạnh khi đồng hành cùng bạn để xây dựng tổ ấm hạnh phúc.
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold mb-4">
+                                SẢN PHẨM
+                            </h6>
+                            <p>
+                                <a href="#Dao" class="inf-usefull text-reset">Dao</a>
+                            </p>
+                            <p>
+                                <a href="#Noi" class="inf-usefull text-reset">Nồi</a>
+                            </p>
+                            <p>
+                                <a href="#Thietbi" class="inf-usefull text-reset">Thiết bị điện</a>
+                            </p>
+                            <p>
+                                <a href="#Khac" class="inf-usefull text-reset">Vật dụng khác</a>
+                            </p>
+                        </div>
+
+                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                            <h6 class="text-uppercase fw-bold mb-4">
+                                LIÊN KẾT
+                            </h6>
+                            <p>
+                                <a href="#!" class="inf-usefull text-reset">Cài đặt</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="inf-usefull text-reset">Đơn hàng</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="inf-usefull text-reset">Help</a>
+                            </p>
+                        </div>
+
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold mb-4">
+                                Contact
+                            </h6>
+                            <p><i class="fas fa-home me-3"></i>HCM - 12 Nguyễn Văn Bảo - Quận Gò Vấp</p>
+                            <p>
+                                <i class="fas fa-envelope me-3"></i> trantrongthiep@gmail.com
+                            </p>
+                            <p><i class="fas fa-phone me-3"></i> 0123456789</p>
+                            <p><i class="fas fa-print me-3"></i> 0123456789</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Copyright -->
+            <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+                ©
+                <script>
+                    document.write(new Date().getFullYear());
+                </script> Shop Dụng Cụ Làm Bếp
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+    </div>
+
+    <div class="modal fade" role="dialog" id="myModalDangNhap" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="margin-top: 10px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="text-left"> ĐĂNG NHẬP</h2>
+                    <button type="button" class="close" aria-label="Close" data-dismiss="modal" style="color: red; outline: none;">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form role="form" class="form-horizontal" style="margin-left: 10px;">
+
+                        <input type="email" id="emailDN" class="form-control" placeholder="Nhập email của bạn..">
+                        <span class="text-danger" id="tbemailDN">*</span><br>
+
+                        <input type="password" id="MKDN" class="form-control" placeholder="Nhập mật khẩu của bạn">
+                        <span class="text-danger" id="tbMKDN">*</span>
+                        <div class="row">
+                            <div class="col-md-6" style="padding-top: .35rem">
+                                <div class="form-check mb-2 mr-sm-2 mb-sm-0">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" name="remember" type="checkbox" >
+                                        <span style="padding-bottom: 15px">Remember me</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-info btn-block" id="btndangnhap" style="color: black; text-decoration: none;">Đăng nhập</button>
+                    </form>
+                </div>
+
+                <div class="modal-footer justify-content-center">
+                    <div class="dangky">Nếu bạn chưa có tài khoản? <span style="cursor: pointer;" class="text-info" id="btndangky">Đăng ký</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" role="dialog" id="myModal" aria-hidden="true">
+        <div class="modal-lg modal-dialog modal-dialog-centered" style="margin-top: 10px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="text-left">THÔNG TIN CÁ NHÂN</h2>
+                    <button type="button" class="close" data-dismiss="modal" style="color: red; outline: none;">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form role="form" class="form-horizontal" style="margin-top: 10px;">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" id="Name" class="form-control" placeholder="Nhập họ tên" required>
+                                <span class="text-danger" id="tbName">*</span>
+                            </div>
+                            <div class="col-md-6" style="margin-bottom: 10px;">
+                                <input type="email" id="Em" class="form-control" placeholder="Nhập email" value="abc@gmail.com" required>
+                                <span class="text-danger" id="tbEM">*</span>
+                            </div>
+                        </div>
+
+                        <div class="row"><label for="NS" class="control-label col-md-3">Ngày sinh</label></div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="date" id="NS" class="form-control">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" id="SDT" class="form-control" placeholder="Nhập số điện thoại">
+                                <span class="text-danger" id="errorSDT"></span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <label for="MK" class="control-label col-md-6">Mật khẩu</label>
+                            <div class="col-md-12">
+                                <input type="password" id="MK" class="form-control" placeholder="Nhập mật khẩu">
+                                <span class="text-danger" id="tbMK">*</span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <label for="NLMK" class="control-label col-md-6">Nhập lại mật khẩu</label>
+                            <div class="col-md-12">
+                                <input type="password" id="NLMK" class="form-control" placeholder="Nhập lại mật khẩu">
+                                <span class="text-danger" id="tbNLMK">*</span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <label for="GT" class="control-label col-md-3 mt-sm-2">Giới tính</label>
+                            <div class="form-check-inline">
+                                <label class="form-check-label" for="radnam">
+                                    <input type="radio" class="form-check-input" id="radnam" name="gioitinh">Nam
+                                </label>
+                            </div>
+                            <div class="form-check-inline">
+                                <label class="form-check-label" for="radnu">
+                                    <input type="radio" class="form-check-input" id="radnu" name="gioitinh">Nữ
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <label for="DC" class="control-label col-md-3">Địa chỉ</label>
+                            <div class="col-md-12">
+                                <input type="text" id="DC" class="form-control" placeholder="Nhập địa chỉ">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-sucess btn-group-justified" id="Save" type="button" style="color: white; background-color: green;width: 100%;">
+                        ĐĂNG KÝ
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
